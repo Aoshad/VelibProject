@@ -1,0 +1,117 @@
+<!doctype html>
+
+<html>
+	
+	<head>
+		<meta charset='utf-8'/>
+		<title>Stations velo'v Lyon</title>
+		<link rel='stylesheet' href='css/style.css'/>
+		<link rel='stylesheet' href='font-awesome/css/font-awesome.min.css'>
+		<script src='https://code.jquery.com/jquery.js'></script>
+	</head>
+
+	<body>
+		<div id='blocPage'>
+
+			<!-- Welcome text -->
+			<header>
+				<div id='logo'><img src='img/velovLogo.png' alt='logo de velov Lyon'/></div>
+				<p id='welcomeText'>
+					<span id="firstColor">Venez</span>
+					<span id="secondColor">découvrir</span>
+					<span id="thirdColor">nos</span>
+					<span id="fourthColor">plus</span>
+					<span id="fifthColor">beaux</span>
+					<span id="sixthColor">vélos</span>
+					<span id="lastColor">!</span>
+				</p>
+			</header>
+
+			<!-- Section with slider in Js -->
+			<div id='flipster'>
+				<ul id='slides'>
+					<li class='slide'><img src='img/pic_4.png' alt='photo de vélo'/></li>
+					<li class='slide'><img src='img/pic_5.png' alt='photo de vélo'/></li>
+					<li class='slide showing'><img src='img/pic_1.png' alt='photo de vélo'/></li>
+					<li class='slide'><img src='img/pic_2.png' alt='photo de vélo'/></li>
+					<li class='slide'><img src='img/pic_3.png' alt='photo de vélo'/></li>
+				</ul>
+			</div>
+
+			<div id='controlsPanel'>
+				<button class='controls' id='previous'> &#8592;</button>
+			 	<button class='controls' id='next'> &#8594;</button>
+			 </div>
+
+		 	<!-- Others section in the bottom -->
+			<div id='bottomSections'>
+
+				<!-- Google map integration -->
+				<section id='map'></section>
+
+				<!-- Form for reservation -->
+				<section id='rentForm'>
+
+					<form>
+						<fieldset>
+							<legend>Détails de la station</legend><br/>
+
+							<div id="infoStation"></div>
+
+							<!-- Modal Box & Canvas -->
+							<input type='button' id='formButton' value='Réserver'/>
+							
+							<div id='myModal' class='modal'>
+								<div class='modalContent'>
+
+									<div class='modalHeader'>
+										<span class='close'>&times;</span>
+										<h2>Signature</h2>
+									</div>
+
+									<div class='modalBody'>
+										<div id='canvasZone'>
+											<canvas id='canvas' width='950' height='300' ></canvas>
+											<canvas id='blank' width='950' height='300' ></canvas>
+										</div>
+										<div id='buttonPannel'>
+											<button type='button' id='validation'>Valider</button>
+											<button type='button' id='clear'>Effacer</button>
+										</div>
+									</div>
+									
+								</div>
+							</div>						
+
+						</fieldset>
+					</form>
+
+				</section>
+
+			</div>
+
+			<footer>
+				<p id='footerText'></p>
+				<div id='informations'>
+					<div id='social'>
+						<a href='https://twitter.com/lyonvelov?lang=fr'><i class='fa fa-twitter fa-4x' aria-hidden='true'></i></a>
+						<a href='https://www.facebook.com/velov.officiel/'><i class='fa fa-facebook-official fa-4x' aria-hidden='true'></i></a>
+					</div>
+					<div id='cityText'>
+						<a href='https://www.grandlyon.com'>Un site de la métropole de Lyon</a>
+					<div>
+				</div>
+			</footer>
+
+			<script type='text/javascript' src='js/slider.js'></script>	
+			<script src="js/markerclusterer/markerclusterer.js"></script>
+			<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDF4TL9C2p3NYWCl5urr_ufXbfD6sqAZJY'></script>
+			<script type="text/javascript" src="js/station.js"></script>
+			<script type='text/javascript' src='js/map.js'></script>
+			<script type="text/javascript" src="js/countdown.js"></script>
+			<script type='text/javascript' src="js/canvas.js"></script>	
+			<script type='text/javascript' src="js/start.js"></script>
+				
+		</div>
+	</body>
+</html>
